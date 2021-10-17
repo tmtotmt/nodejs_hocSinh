@@ -1,0 +1,11 @@
+{
+  "name": "hocSinh",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tmtotmt/nodejs_hocSinh.git",
+  "author": "TMT",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
