@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --text-white: #f1f1f1;
+    --background-0:#306054;
+    --backgorund-1: #436E63;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: var(--background-0);
+    color: var(--text-white);
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-item {
+    list-style: none;
+    display: inline-flex;
+}
+
+.nav-link {
+    text-decoration: none;
+    padding: 16px 32px;
+    color: var(--text-white);
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    background-color: var(--backgorund-1);
+}
+
+/* PHẦN BODY*/
+
+/* admin */
+
+.admin-container {
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+.admin {
+    min-width: 300px;
+}
+
+.admin .admin-header {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.admin .guide {
+    margin-bottom: 16px;
+    text-align: center;
+}
+.admin .input {
+    width: 100%;
+    padding: 8px 8px;
+    border: none;
+    box-shadow: 0 0 4px 1px rgba(0,0,0,0.3);
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.admin .input:focus {
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.3);
+}

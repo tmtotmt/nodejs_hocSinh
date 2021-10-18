@@ -3,7 +3,7 @@ const siteRouter = require('./site.route')
 function routes(app) {
 
     app.use('/search',searchRouter)
-    app.use('/admin',siteRouter)
+    app.use('/',siteRouter)
 }
 
 module.exports = routes
