@@ -1,0 +1,39 @@
+.create {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    max-width: 90%;
+}
+
+.create .title {
+    font-size: 1.2rem;
+    margin: 16px 8px;
+}
+
+.create .box {
+    width: 100%;
+    display: flex;
+    margin: 10px;
+}
+
+.create label {
+    min-width: 120px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 2rem;
+    padding-left: 10px;
+}
+
+.create input {
+    flex: 1;
+    padding: 8px 8px;
+    border: none;
+    box-shadow: 0 0 4px 1px rgba(0,0,0,0.3);
+    outline: none;
+    font-size: 1rem;
+}
+
+.create input:focus {
+
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.3);
+}

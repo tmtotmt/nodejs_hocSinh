@@ -1,0 +1,25 @@
+<%- include('./layouts/header',{title: 'ok luon',linkCss:'/css/create.css'}) %>
+
+<div class="create">
+    <form action="create/store" method="POST">
+    
+        <p class="title">Thêm các anh hùng</p>
+        
+        <div class="box">
+            <label for="">Tên: </label>
+            <input type="text" name="name" required>
+        </div>
+        <div class="box">
+        
+            <label for="">description:</label>
+            <input type="text" name="description" required>
+        </div>
+        <div class="box">
+            <label for="">video:</label>
+            <input type="text" name="video" required>
+        </div>
+        <button type="submit">submit</button>
+    </form>
+</div>
+
+<%- include('./layouts/footter') %>

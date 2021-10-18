@@ -1,6 +1,31 @@
 <!-- phần headder + head, voi tittel -->
-<%- include('../layouts/header',{title: 'ok luon'}) %>
+<%- include('../layouts/header',{title: 'Học sinh gương mẫu của thầy',linkCss:"/css/home.css"}) %>
+
+
+<!-- body phần trang chủ -->
+<p class="page" >TRANG CHỦ</p>
     
-<h1>HOME</h1>
-    
+<p class="page-sub">Các em học sinh nổi bật</p>
+<hr style="width:980px; max-width: 100%;"/>
+<br>
+
+<div class="homepage">
+<% dataStundent.forEach(student=>{%>
+    <div class="card">
+        <div class="card-img-top">
+            <a href="/student/<%=student.name %>">
+                <img src=<%=student.img%> alt=<%=student.name%>>
+            </a>
+        </div>
+        <div class="card-body">
+            <h3>Họ và tên: <%=student.name %></h3>
+            <p>Nổi bật: <%=student.description %></p>
+
+        </div>
+
+    </div>   
+<%}) %>
+</div>
+
+<!-- footter -->
 <%- include('../layouts/footter') %>
