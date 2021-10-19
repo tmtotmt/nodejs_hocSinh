@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const path = require('path');
 const morgan = require('morgan')
+//chuyển từ 2 phương thức get post thêm nhiều phương thức khác
+const methodOverride = require('method-override')
 const port = 3000
 
 
@@ -25,6 +27,8 @@ app.use(express.urlencoded({
 }))
 // dùng để gửi dữ liệu Từ client lên serve, ... ( có dạng JSON sẽ không bị lỗi ??)
 app.use(express.json())
+// thêm phương thức cho header ở phần  ...
+app.use(methodOverride('_method'))
 
 // call hàm với đối số app, để HTTP qua bên routes 
 routes(app)

@@ -1,15 +1,21 @@
 const mongoose = require('mongoose')
+
+const slug = require('mongoose-slug-generator');
+mongoose.plugin(slug);
+
 const Schema = mongoose.Schema;
 
 // định nghĩa 1 schema   Stutent
-const student = new Schema({
+const StudentSchema = new Schema({
     name: { type: String, default: 'no Name' },
     age: { type: Number },
     description: { type: String },
     img: {type: String},
     video: {type: String},
-    date: { type: Date, default: Date.now },
+    slug: {type: String, slug: 'name', unique: true}
+  }, {
+    timestamps: true,
   });
 
 // tạo một model student từ class Schema đã định nghĩa, rồi xuất ra
-module.exports = mongoose.model('student', student); //mongoose.model('ModelName', mySchema)
+module.exports = mongoose.model('student', StudentSchema); //mongoose.model('ModelName', mySchema)

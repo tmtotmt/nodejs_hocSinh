@@ -1,0 +1,25 @@
+<%- include('./layouts/header',{title: 'trang sửa',linkCss:'/css/create.css'}) %>
+
+<div class="create">
+    <form action="edit?_method=PUT" method="POST">
+    
+        <p class="title">cập nhật anh hùng</p>
+        
+        <div class="box">
+            <label for="">Tên: </label>
+            <input type="text" name="name" required value="<%=student.name%>">
+        </div>
+        <div class="box">
+        
+            <label for="">description:</label>
+            <input type="text" name="description" required value="<%=student.description%>">
+        </div>
+        <div class="box">
+            <label for="">video:</label>
+            <input type="text" name="video" value="<%=student.video%>" placeholder="mã của video youtu sau ( watch?v= ) là vd: lFd5JCykU7A" required>
+        </div>
+        <button type="submit">submit</button>
+    </form>
+</div>
+
+<%- include('./layouts/footter') %>

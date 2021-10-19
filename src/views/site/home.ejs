@@ -12,11 +12,12 @@
 <div class="homepage">
 <% dataStundent.forEach(student=>{%>
     <div class="card">
+        <a class="link-img" href="/student/<%=student.slug %>">
         <div class="card-img-top">
-            <a href="/student/<%=student.name %>">
-                <img src=<%=student.img%> alt=<%=student.name%>>
-            </a>
-        </div>
+                <img src="http://img.youtube.com/vi/<%=student.img%>/hqdefault.jpg" alt=<%=student.name%>">
+                
+            </div>
+        </a>
         <div class="card-body">
             <h3>Họ và tên: <%=student.name %></h3>
             <p>Nổi bật: <%=student.description %></p>

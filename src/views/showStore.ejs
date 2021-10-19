@@ -1,0 +1,26 @@
+<%- include('./layouts/header',{title: 'ok luon',linkCss:'/css/create.css'}) %>
+
+<table style="width:900px; text-align: center">
+    <tr>
+      <th>Stt</th>
+      <th>Tên hero</th>
+      <th>Ngày tạo</th>
+      <th>!</th>
+    </tr>
+    <% stundents.forEach((student, index)=>{ %>
+
+      <tr>
+        <td><%=index+1%></td>
+        <td><%=student.name %></td>
+        <td><%=student.createdAt %></td>  
+        <td style="display: flex;"><a href="<%=student.slug%>/edit">sửa | </a> 
+          <form action="<%=student.slug%>/edit?_method=DELETE" method="post">
+            <button type="submit">xoa</button>
+          </form>
+        </td>  
+      </tr>
+    <%});%>
+
+  </table>
+ 
+<%- include('./layouts/footter') %>

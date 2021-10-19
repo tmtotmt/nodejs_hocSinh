@@ -37,3 +37,20 @@
 
     box-shadow: 0 0 8px 2px rgba(0,0,0,0.3);
 }
+
+.create button {
+    
+    background-color: #619499;
+    padding: 8px 32px;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    color: #f1f1f1;
+    box-shadow: 0 0 4px 1px rgba(0,0,0,0.3);
+}
+.create button:hover {
+    background-color: #306054;
+    cursor: pointer;
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.3);
+}

@@ -62,6 +62,26 @@
     margin-top: -8px;
     margin-left: -8px;
     margin-right: -8px;
+    position: relative;
+}
+
+.card-img-top::after {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 4px;
+    right: 0;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    display: none;
+}
+
+.card .link-img:hover 
+.card-img-top::after {
+    display: block;
+    transform-origin: right;
+    animation: fadeIn ease 0.6s;
 }
 
 .card-img-top img {
